@@ -1,7 +1,7 @@
 # Part 3 of the Algorithms Specialization: Greedy Algorithms, Minimum Spanning Trees, and Dynamic Programming!
 
 TWO MOTIVATING APPLICATIONS: We begin with a fairly non-technical discussion of two motivating applications --- distributed shortest-path routing in the Internet, 
-and sequence alignment --- to build excitement for the tools that you'll acquire later in this course (and also in Part 4 of the specialization).
+and sequence alignment --- to build excitement for the tools that we will acquire later in the course (and also in Part 4 of the specialization).
 
 INTRODUCTION TO GREEDY ALGORITHMS: 
 The focus of this week and the next is the greedy algorithm design paradigm. The two non-technical videos discuss the pros and cons of this paradigm and describe 
