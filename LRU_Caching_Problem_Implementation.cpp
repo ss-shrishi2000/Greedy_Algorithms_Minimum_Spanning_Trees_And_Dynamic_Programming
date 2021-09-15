@@ -26,6 +26,26 @@ PROBLEM STATEMENT :-  Design a data structure that follows the constraints of a 
   void put(int key, int value) - Update the value of the key if the key exists. Otherwise, add the key-value pair to the cache. 
     If the number of keys exceeds the capacity from this operation, evict the least recently used key.
     The functions get and put must each run in O(1) average time complexity.
+    
+    
+  Accessing and Evicting :-
+    
+Putting things together, here are the steps we'd run through each time an item was accessed:
+Look up the item in our hash map.
+If the iTem is in the hash table, then it's already in our cache—this is called a "cache hit"
+Use the hash table to quickly find the corresponding linked list node.
+Move the item's linked list node to the head of the linked list, since it's now the most recently used (so it shouldn't get evicted any time soon).
+If the item isn't in the hash table, we have a cache miss. We need to load the item into the cache:
+
+Is our cache full? If so, we need to evict something to make room:
+Grab the least-recently used cache item—it'll be at the tail of the linked list.
+Evict that item from the cache by removing it from the linked list and the hash map.
+Create a new linked list node for the item. 
+Insert it at the head of the linked list.
+Add the item to our hash map, storing the newly-created linked list node as the value.
+Keeping all the pointers straight as you move around linked list nodes is tricky.
+
+All of those steps are O(1), so put together it takes O(1) time to update our cache each time an element is accessed. 
 
 
 Example 1:
