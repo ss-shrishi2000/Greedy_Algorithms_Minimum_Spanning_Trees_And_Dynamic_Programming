@@ -11,7 +11,6 @@ In the case of union by size, a node stores its size, which is simply its number
 the node with more descendants becomes the parent. If the two nodes have the same number of descendants, then either one can become the parent. In both cases, the size of the
 new parent node is set to its new total number of descendants.
 
-//Implementing only the essential elements of the function.
 
 
 For union by rank, a node stores its rank, which is an upper bound for its height. When a node is initialized, its rank is set to zero. To merge trees with roots x and y, 
@@ -72,7 +71,8 @@ struct subset{
         Union(subsets , x,y);
     }
     
-  
+  //Implementing only the essential elements of the function.
+
   
   
   
