@@ -5,8 +5,9 @@ The choice of which node becomes the parent has consequences for the complexity 
 For example, suppose that Union always made the tree containing x a subtree of the tree containing y. Begin with a forest that has just been initialized with elements 
 1, 2, 3, ..., n, and execute Union(1, 2), Union(2, 3), ..., Union(n − 1, n). The resulting forest contains a single tree whose root is n, and the path from 1 to n passes 
 through every node in the tree. For this forest, the time to run Find(1) is O(n).
-In an efficient implementation, tree height is controlled using union by size or union by rank. Both of these require that a node store information besides just its 
-parent pointer. This information is used to decide which root becomes the new parent. Both strategies ensure that trees do not become too deep.
+In an efficient implementation, tree height is controlled using union by size or union by rank. 
+Both of these require that a node store information besides just its parent pointer. This information is used to decide which root becomes the new parent. 
+Both strategies ensure that trees do not become too deep.
 In the case of union by size, a node stores its size, which is simply its number of descendants (including the node itself). When the trees with roots x and y are merged, 
 the node with more descendants becomes the parent. If the two nodes have the same number of descendants, then either one can become the parent. In both cases, the size of the
 new parent node is set to its new total number of descendants.
